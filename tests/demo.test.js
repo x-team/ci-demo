@@ -2,6 +2,7 @@ const { getTrue } = require('../src/good-functions')
 
 describe('Demo', () => {
   it('passes the test', () => {
-    expect(getTrue()).toBe(false)
+    const result = getTrue()
+    expect(result).toBe(true)
   })
 })
