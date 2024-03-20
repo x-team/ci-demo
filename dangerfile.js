@@ -1,4 +1,10 @@
-const {schedule, markdown, danger, warn} = require('danger');
-const coverage = require('danger-plugin-coverage').default
+const { schedule } = require('danger');
 
-schedule(coverage())
+const { istanbulCoverage } = require('danger-plugin-istanbul-coverage')
+
+schedule(istanbulCoverage({
+  coveragePath: {
+    path: './coverage/lcov.info',
+    type: 'lcov'
+  }
+}))
