@@ -1,4 +1,8 @@
-function getTrue () {
+function getTrue (shouldLie) {
+  if (shouldLie) {
+    return false
+  }
+
   return true
 }
 
