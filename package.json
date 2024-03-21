@@ -10,6 +10,8 @@
   "author": "joshwnj",
   "license": "MIT",
   "devDependencies": {
+    "danger": "^11.3.1",
+    "danger-plugin-istanbul-coverage": "^1.6.2",
     "jest": "^29.7.0"
   }
 }
