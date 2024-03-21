@@ -1,4 +1,4 @@
-const { schedule } = require('danger');
+const { markdown, schedule } = require('danger');
 
 const { istanbulCoverage } = require('danger-plugin-istanbul-coverage')
 
@@ -8,3 +8,5 @@ schedule(istanbulCoverage({
     type: 'lcov'
   }
 }))
+
+markdown(`[Coverage Report](https://ci-demo-builds.s3.us-east-1.amazonaws.com/${CODEBUILD_WEBHOOK_TRIGGER}/lcov-report/index.html))
